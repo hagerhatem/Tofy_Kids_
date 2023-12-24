@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>TOFY KIDS</title>
+</head>
+<body>
+
+
+<!-- Slideshow Background -->
+<div class="slideshow" id="start">
+    <div class="slideshow-image active" style="background-image: url('images/slid1.png');"></div>
+    <div class="slideshow-image" style="background-image: url('images/slid2.png');"></div>
+    <div class="slideshow-image" style="background-image: url('images/slid3.png');"></div>
+  </div>
+
+  <!-- Navigation Circles -->
+  <div class="navigation">
+    <div class="navigation-circle"></div>
+    <div class="navigation-circle"></div>
+    <div class="navigation-circle"></div>
+  </div>
+
+  <!-- red button at top right the home -->
+  <div class="red-button">
+    <a class="button" href="#watch-videos">Watch Videos</a>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i> <!--ده عشان اظهر شكل ايقونه المنيو-->
+</label>
+    <img class="navbar-logo" src="images/logo2.png" alt="Logo">
+    <ul>
+      <li><a href="#start">Home</a></li>
+      <li><a href="#playGames">Games</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="sign.html">Sign Up</a></li>
+    </ul>
+  </div>
+
+
+
+  <script>
+    // JavaScript for slideshow animation
+    var images = document.querySelectorAll('.slideshow-image');
+    var circles = document.querySelectorAll('.navigation-circle');
+    var currentImageIndex = 0;
+    
+    function showImage(index) {
+      images.forEach(function(image) {
+        image.classList.remove('active');
+      });
+      circles.forEach(function(circle) {
+        circle.style.backgroundColor = '#fff';
+      });
+      images[index].classList.add('active');
+      circles[index].style.backgroundColor = '#FF0000';
+    }
+    
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+    
+    function circleClick(index) {
+      currentImageIndex = index;
+      showImage(currentImageIndex);
+    }
+    
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+    
+    circles.forEach(function(circle, index) {
+      circle.addEventListener('click', function() {
+        circleClick(index);
+      });
+    });
+  </script>
+
+
+   
+
+<!--Videos Section 1-->
+
+<div id="watch-videos">
+<h1 class="section-title"> <i class="music"></i> With Music </h1>
+<div  class="section">
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Oh_yDM2GOAo?si=V-_RPlEa7RbUg2HU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-mxQQiP7Z3A?si=_msce38niWNE1Q38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WmjagtVK9XE?si=eTPOYP945nRykpR1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T972E8BjTgQ?si=4MvBP4nS6nyr-wsj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zk2t7_DZQ1A?si=6afRf7c2PVXkEoyK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqC2JdUiT_M?si=f6IwsqyVy-Dz2iNC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5n7ERD7QbUQ?si=uD0fuue8rSkW8jm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/g3IOTbVkMFU?si=bJX2-Deumi6In7-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kXBbfiPXJg0?si=KAXC0EtjGvNzuVVB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/itwwQqgk2Xc?si=sBOnQQiVX70hNK40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QZ20-k3DwtY?si=emZ-XKZruAFB1YZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/B7eQCPBQPpc?si=RNy0adiZdXHlTZca" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/WHmof_nlMws?si=W9CRV0OV3-3lIafZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RcxHMkGeBHA?si=Pna1OkTbO0DiVwBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/khIO3mhfOXY?si=tZdlHbqwkKal4tZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/D-HBi4sC8oU?si=WmU3PcGa4T7hMgh-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!--Videos Section 2-->
+
+<h1 class="section-title"> <i class="music"></i> Without Music </h1>
+<div class="section">
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VoQtSm9vFSI?si=hJKDr2KHkd8OIqVr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tl_N7Bjp5GQ?si=WoYNW-h8gcEUlGhX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xkzanNtRnx8?si=vOQXyIwpZbAAjpAN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FXHDEKjTLzM?si=Oyu6pckYGcfZzISR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MbcOcTK9bMI?si=t0nkDQQ_JSmGcjCN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qR2zP3nLYaE?si=HcPTD8VRdjeK3lpv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqC2JdUiT_M?si=f6IwsqyVy-Dz2iNC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div> 
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6jucgnys4Cs?si=9kBbE_qtIokx27ze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5n7ERD7QbUQ?si=uD0fuue8rSkW8jm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u2yLxcTb6UE?si=PYtf5kc3u4LTeV5R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L7t4ivAicbY?si=45061QGGfpOHAsGS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LvFFc2pVW2o?si=XFEgaQYFkG39E4TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wWQO1gLA-oo?si=S8RWFvdroeMJic8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vTrVWV4fX_g?si=WQvnjDgUzU-JCW73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/itdjedsNxKI?si=OonCselQjoNwMicK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0aBCRImU2Wg?si=O2-81hP1fh6ov0JC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+
+
+<!--Games-->
+
+<div id="playGames">
+<h1 class="section-title"> <i class="music"></i> Games </h1>
+<div class="card-container">
+  <div class="card">
+    <img src="images/card1p11.png" alt="one player">
+    <div class="card-content">
+      <a href="game2.html" class="card-button">Play Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/card2p2.png" alt="two players">
+    <div class="card-content">
+      <a href="games.html" class="card-button">Play Now</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+  <!--About Us-->
+
+  <section id="about-us">
+    <div class="about-logo">
+      <img src="images/logo1.png" alt="Logo">
+    </div>
+    <h2 class="about-title">About Us</h2>
+    <p class="about-description">TOFY KIDS is a website dedicated to a YouTube channel featuring engaging cartoon videos for children. The channel offers two distinct categories of content: videos with music and videos without music. The website provides convenient contact information and a sign-up option for users to stay connected and receive updates on new releases and exciting content. </p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@tofykids?si=v3mN2-WT2ekQ1ywN"><img src="images/youtube.png" alt="YouTube"></a>
+      <a href="https://www.tiktok.com/@hager_hatem_?_t=8hf5ebeJ1oT&_r=1"><img src="images/tiktok.png" alt="TikTok"></a>
+      <a href="https://www.facebook.com/profile.php?id=100081650325502&mibextid=9R9pXO"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://x.com/dnagib199?s=21&t=oi7tVCvyd1RfcLv1wKQ_kw"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://wa.me/+201061069697"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+    <hr> 
+    <div id="copy">
+      <br>
+      <h5 style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: rgb(90, 89, 89);"> © 2023 copyright all right reserved to Hager Hatem </h5>
+    </div>
+  </section>
+</body>
+</html>
